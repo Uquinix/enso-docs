@@ -5,19 +5,23 @@
 Enso can be built by using either LLVM or GNU toolchains.
 
 For Arch Based Distributions:
+
 `pacman -S make nasm`
 
 For Debian Based Distributions:
+
 `sudo apt-get install make nasm`
 
 ## With LLVM
 
 Building Enso requires `lld` and `clang-13`.
 
-For Arch Based Distributions:
+For Arch Based Distributions
+
 `pacman -S lld clang`
 
 For Debian Based Distributions:
+
 `sudo apt-get install lld clang`
 
 Enso is build via `LLVM` by default, to build - run the following:
@@ -36,7 +40,9 @@ After building the binutils you can build Enso by running:
 
 ## Notes on macOS
 
-If you use [Homebrew package manager](https://brew.sh), you can obtain the dependencies by running `brew install qemu nasm xorriso llvm binutils wget pkg-config sdl2`.
+If you use [Homebrew package manager](https://brew.sh), you can obtain the dependencies by running: 
+
+`brew install qemu nasm xorriso llvm binutils wget pkg-config sdl2`.
 
 LLVM on Homebrew is keg by default, run `darwin.sh` to set these environment variables:
 
