@@ -42,7 +42,7 @@ After building the binutils you can build Enso by running:
 
 If you use [Homebrew package manager](https://brew.sh), you can obtain the dependencies by running: 
 
-`brew install qemu nasm xorriso llvm binutils wget pkg-config sdl2`.
+`brew install nasm xorriso llvm binutils wget pkg-config sdl2`.
 
 LLVM on Homebrew is keg by default, run `darwin.sh` to set these environment variables:
 
@@ -57,3 +57,24 @@ It is recommended to set these in your shell-profile, as everytime your terminal
 Then build Enso by running:
 
 `make all`
+
+## Running Enso with Lotus
+
+Lotus is based on the guts of QEMU, but with better debugging abilities, allowing for a faster and greater workflow.
+
+To build Lotus, you must follow these simple steps.
+
+```shell
+mkdir -p build
+cd build
+../configure --target-list=x86_64-softmmu --enable-debug
+make all -j$(nproc)
+```
+
+And to build Lotus (and automatically add to PATH)
+
+```shell
+sudo make install
+```
+
+After these steps, Lotus will just work. No setup required.
