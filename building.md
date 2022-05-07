@@ -6,7 +6,7 @@ Enso can be built by using either LLVM or GNU toolchains.
 
 For Arch Based Distributions:
 
-`pacman -S make nasm`
+`sudo pacman -S make nasm`
 
 For Debian Based Distributions:
 
@@ -18,11 +18,11 @@ Building Enso requires `lld` and `clang-13`.
 
 For Arch Based Distributions
 
-`pacman -S lld clang`
+`sudo pacman -S lld clang llvmw`
 
 For Debian Based Distributions:
 
-`sudo apt-get install lld clang`
+`sudo apt-get install lld clang llvm`
 
 Enso is build via `LLVM` by default, to build - run the following:
 
